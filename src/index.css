@@ -1,0 +1,457 @@
+.loading-screen {
+    background-color:hsl(206, 20%, 35%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*First page*/
+.triangle-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    background-color: hsl(206, 20%, 25%);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.first-page h1,
+.first-page h3 {
+    color: #f5ecdc;
+    text-align: center;
+    font-weight: bold;
+}
+.first-page h1 {
+    font-size: 64px;
+    margin: 0px;
+}
+.first-page h3 {
+    font-size: 20px;
+}
+
+.first-page {
+    background-color: hsl(206, 20%, 35%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning */
+    overflow: hidden; /* In case triangle spills outside */
+}
+.top-logos {
+    position: absolute;
+    top: 20px;
+    right: 5vh;
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+}
+.top-logos svg {
+    color: #f5ecdc;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.top-logos svg:hover {
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* adjust as needed */
+    }
+}
+.bottom-arrow {
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: hsl(203, 20%, 35%);
+    position: absolute;
+    bottom: 10px;
+    animation: bounce 1s infinite;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+.bottom-arrow:hover {
+    background-color: hsl(203, 20%, 30%);
+    color: hsl(0, 0%, 80%);
+}
+.bottom-arrow-div {
+    display: flex;
+    justify-content: center;
+}
+/*Scound page*/
+
+#secound-page {
+    background-color: hsl(206, 20%, 25%);
+    height: fit-content;
+    overflow: hidden; /* In case triangle spills outside */
+}
+#secound-page .content h1 {
+    color: white;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
+}
+.content {
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 64px;
+}
+.line {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.projects {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; /* centers the grid itself */
+    width: 100%;
+}
+
+.parent-and-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.and-more {
+    color: white;
+    background-color: #3a4b58;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    cursor: pointer;
+
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transform-style: preserve-3d;
+}
+.and-more:hover {
+    transform: translateY(-5px); /* slight lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    filter: brightness(1.05); /* slight brightening */
+}
+
+/*Project Tile*/
+
+.project-tile {
+    height: 150px;
+    width: 100%;
+    background-color: #3a4b58;
+    border-radius: 10px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px); /* slight lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    filter: brightness(1.05); /* slight brightening */
+}
+
+.project-tile h4 {
+    font-size: 24px;
+    color: white;
+    margin: 0px;
+}
+.project-tile .title {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* <-- Adds space between icon and text */
+}
+.project-tile .data {
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.project-tile p {
+    color: #90a6b5;
+    font-size: 18px;
+    text-overflow: ellipsis;
+}
+
+/*Third-Page*/
+.third-page {
+    position: relative;
+    background-color: hsl(206, 20%, 20%);
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-section-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: hsl(206, 20%, 25%);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    z-index: 1;
+}
+
+.about-me {
+    margin-top: 32px;
+    position: relative;
+    z-index: 2; /* Makes it appear above the triangle */
+    width: 90vh;
+    height: fit-content;
+    background-color: hsl(206, 20%, 10%);
+    border-radius: 16px;
+    padding: 20px;
+
+    margin: 64px;
+}
+.preview {
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* <-- Adds space between icon and text */
+}
+.preview h5 {
+    color: white;
+    margin-top: 2px;
+    font-size: 24px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.my-data {
+    flex: 1;
+}
+.skills {
+    flex: 1;
+}
+
+.about-me h2 {
+    color: white;
+    font-size: 32px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me p {
+    color: hsl(0, 0%, 80%);
+    font-size: 22px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me h4 {
+    margin: 0;
+    color: hsl(0, 0%, 95%);
+    font-size: 24px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me li {
+    font-size: 22px;
+    list-style: circle;
+    color: hsl(0, 0%, 80%);
+    margin-bottom: 8px;
+}
+/*Git Card*/
+.git-hub-card {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background-color: #151515;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid #e1e2e6;
+}
+.git-hub-card img {
+    border-radius: 100px;
+}
+.git-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.profile-data {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Forth Page*/
+
+.forth-page {
+    position: relative;
+    background-color: hsl(206, 20%, 15%);
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 40px);
+    gap: 32px;
+    padding: 20px;
+}
+
+.forth-page h3 {
+    color: hsl(0, 0%, 95%);
+    font-size: 32px;
+    margin: 0px;
+    text-align: center;
+}
+
+/*Fifth Page*/
+
+.fifth-page {
+    position: relative;
+    background-color: hsl(206, 20%, 10%);
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 24px;
+}
+
+.powered {
+    color: hsl(0, 13%, 78%);
+    position: absolute;
+    bottom: 0px;
+}
+
+.git-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.git-section a {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(204, 9%, 15%);
+    gap: 8px;
+    width: fit-content;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.git-section a p {
+    font-size: 20px;
+    margin: 0px;
+    color: hsl(0, 0%, 80%);
+    font-weight: 700;
+}
+.git-section p {
+    color: hsl(0, 0%, 95%);
+    font-size: 40px;
+    margin: 0px;
+}
+
+.discord-section {
+    padding: 24px;
+    background-color: #6a7ec5;
+    color: hsl(0, 0%, 95%);
+    font-size: 20px;
+    margin: 0px;
+    gap: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.devider {
+    border: hsl(0, 0%, 80%) solid 2px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+@media (min-width: 1500px) {
+    .project-tile {
+        width: 600px;
+    }
+    .projects {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 999px) {
+    .row {
+        flex-direction: column;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.badges img {
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.badges img:hover {
+    transform: scale(1.05);
+}
