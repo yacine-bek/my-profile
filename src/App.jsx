@@ -6,7 +6,7 @@ import FifthPage from "./pages/FifthPage";
 
 import React, { useEffect, useState } from "react";
 import { getUserData } from "./utils/github";
-import { LifeLine } from "react-loading-indicators";
+import { TrophySpin ,BlinkBlur} from "react-loading-indicators";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -18,7 +18,7 @@ function App() {
     if (!user)
         return (
             <div className="loading-screen">
-                <LifeLine color="#f5ecdc" size="medium" text="" textColor="" />
+                <BlinkBlur color="#f5ecdc" size="medium" text="" textColor="" />
             </div>
         ); 
 
