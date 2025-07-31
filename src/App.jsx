@@ -6,7 +6,7 @@ import FifthPage from "./pages/FifthPage";
 
 import React, { useEffect, useState } from "react";
 import { getUserData } from "./utils/github";
-import {Riple} from "react-loading-indicators";
+import { Riple} from "react-loading-indicators";
 
 function App() {
     const [user, setUser] = useState(null);
