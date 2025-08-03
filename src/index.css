@@ -1,10 +1,18 @@
 .loading-screen {
-    background-color:hsl(206, 20%, 35%);
-    width: 100vw;
+    background-color: #33414c;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.loading-screen h3 {
+    color: #f5ecdc;
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
 }
 
 body {
@@ -369,7 +377,9 @@ html {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    
 }
+
 .git-section a {
     padding: 10px;
     display: flex;
@@ -381,7 +391,14 @@ html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    transition: transform 0.1s ease-in-out;
 }
+.git-section a:hover {
+    transform: scale(1.05);
+}
+
+
 .git-section a p {
     font-size: 20px;
     margin: 0px;
@@ -395,7 +412,7 @@ html {
 }
 
 .discord-section {
-    padding: 24px;
+    padding: 20px;
     background-color: #6a7ec5;
     color: hsl(0, 0%, 95%);
     font-size: 20px;
@@ -407,7 +424,12 @@ html {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    transition: transform 0.1s ease-in-out;
 }
+.discord-section:hover {
+    transform: scale(1.05);
+}
+
 .devider {
     border: hsl(0, 0%, 80%) solid 2px;
     height: 150px;
@@ -430,6 +452,15 @@ html {
     }
     .projects {
         grid-template-columns: 1fr;
+    }
+    .fifth-page {
+        flex-direction: column;
+    }
+    .devider {
+        border: hsl(0, 0%, 80%) solid 2px;
+        width: 200px;
+        height: 0px;
+        border-radius: 100px;
     }
 }
 

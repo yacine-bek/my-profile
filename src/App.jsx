@@ -6,7 +6,7 @@ import FifthPage from "./pages/FifthPage";
 
 import React, { useEffect, useState } from "react";
 import { getUserData } from "./utils/github";
-import { Riple} from "react-loading-indicators";
+import { Riple } from "react-loading-indicators";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -15,17 +15,18 @@ function App() {
         getUserData("yacine-bek").then(setUser);
     }, []);
 
-    if (!user)
-        return (
-            <div className="loading-screen">
-                <Riple color="#f5ecdc" size="medium" text="" textColor="" />
-            </div>
-        ); 
-
     return (
         <>
             <FirstPage />
-            <SecoundPage repos={user.repos} />
+            {!user ? (
+                <div className="loading-screen">
+                    <h3>Projects Loading..</h3>
+                    <Riple color="#f5ecdc" size="medium" text="" textColor="" />
+                </div>
+            ) : (
+                <SecoundPage repos={user.repos} />
+            )}
+
             <ThirdPage user={user} />
             <ForthPage />
             <FifthPage />
