@@ -8,33 +8,37 @@ import ThirdPage from "./pages/ThirdPage";
 import ForthPage from "./pages/ForthPage";
 import FifthPage from "./pages/FifthPage";
 
-import { getUserData } from "./utils/github";
-
 
 function App() {
-  const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    getUserData("yacine-bek").then(setUser);
-  }, []);
+    useEffect(() => {
+        fetch("/api/users/yacine-bek")
+            .then((res) => {
+                if (!res.ok) throw new Error("User not found");
+                return res.json();
+            })
+            .then(setUser)
+            .catch((err) => console.error(err));
+    }, []);
 
-  return (
-    <>
-      <FirstPage />
-      {!user ? (
-        <div className="loading-screen">
-          <h3>Projects Loading..</h3>
-          <Riple color="#f5ecdc" size="medium" text="" textColor="" />
-        </div>
-      ) : (
-        <SecoundPage repos={user.repos} />
-      )}
+    return (
+        <>
+            <FirstPage />
+            {!user ? (
+                <div className="loading-screen">
+                    <h3>Projects Loading..</h3>
+                    <Riple color="#f5ecdc" size="medium" text="" textColor="" />
+                </div>
+            ) : (
+                <SecoundPage repos={user.repos} />
+            )}
 
-      <ThirdPage user={user} />
-      <ForthPage />
-      <FifthPage />
-    </>
-  );
+            <ThirdPage user={user} />
+            <ForthPage />
+            <FifthPage />
+        </>
+    );
 }
 
 export default App;

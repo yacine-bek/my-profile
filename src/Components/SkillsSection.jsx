@@ -1,17 +1,20 @@
-
 function SkillsSection() {
     return (
         <div>
             <div className="programming-lang">
                 <h4>💻 Languages I Speak</h4>
                 <p>
-                    C# - Java - Python - Dart - JavaScript - HTML - CSS - SQL - Kotlin - C
+                    C# - Java - Python - Dart - JavaScript - HTML - CSS - SQL -
+                    Kotlin - C
                 </p>
                 <h4>🛠️ Frameworks & Libraries</h4>
-                <p>Flutter - React - Django - .Net - JavaFX - PyQt</p>
+                <p>
+                    Flutter - React - Django - .Net - JavaFX - PyQt - Node.js -
+                    Express
+                </p>
                 <h4>🧠 What I've Built</h4>
                 <ul>
-                    <li>WebSites (React - Django)</li>
+                    <li>WebSites (React - Express)</li>
                     <li>Cross-platform Apps (Flutter)</li>
                     <li>DeskTop (.Net - JavaFX - PyQT)</li>
                     <li>Bots (Discord - Telegram)</li>
