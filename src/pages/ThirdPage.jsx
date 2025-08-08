@@ -1,6 +1,8 @@
 import { Eye } from "lucide-react";
 import GithubCard from "../Components/GithubCard";
 import SkillsSection from "../Components/SkillsSection";
+import "../styles/ThirdPage.css"
+
 function ThirdPage(props) {
     return (
         <div className="third-page">

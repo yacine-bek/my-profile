@@ -1,0 +1,109 @@
+.third-page {
+    position: relative;
+    background-color: hsl(206, 20%, 20%);
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-section-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: hsl(206, 20%, 25%);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    z-index: 1;
+}
+
+.about-me {
+    margin-top: 32px;
+    position: relative;
+    z-index: 2; /* Makes it appear above the triangle */
+    width: 90vh;
+    height: fit-content;
+    background-color: hsl(206, 20%, 10%);
+    border-radius: 16px;
+    padding: 20px;
+
+    margin: 64px;
+}
+.preview {
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* <-- Adds space between icon and text */
+}
+.preview h5 {
+    color: white;
+    margin-top: 2px;
+    font-size: 24px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.my-data {
+    flex: 1;
+}
+.skills {
+    flex: 1;
+}
+
+.about-me h2 {
+    color: white;
+    font-size: 32px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me p {
+    color: hsl(0, 0%, 80%);
+    font-size: 22px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me h4 {
+    margin: 0;
+    color: hsl(0, 0%, 95%);
+    font-size: 24px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me li {
+    font-size: 22px;
+    list-style: circle;
+    color: hsl(0, 0%, 80%);
+    margin-bottom: 8px;
+}
+/*Git Card*/
+.git-hub-card {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background-color: #151515;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid #e1e2e6;
+}
+.git-hub-card img {
+    border-radius: 100px;
+}
+.git-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.profile-data {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 999px) {
+    .about-me {
+        margin: 12px;
+    }
+}

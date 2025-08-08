@@ -1,0 +1,65 @@
+.forth-page {
+    position: relative;
+    background-color: hsl(206, 20%, 15%);
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 40px);
+    gap: 32px;
+    padding: 20px;
+}
+
+.forth-page h3 {
+    color: hsl(0, 0%, 95%);
+    font-size: 32px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.badges img {
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.badges img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (min-width: 1500px) {
+    .project-tile {
+        width: 600px;
+    }
+    .projects {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+@media (max-width: 999px) {
+    .row {
+        flex-direction: column;
+    }
+}

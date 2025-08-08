@@ -1,5 +1,6 @@
 import { FaGithub, FaDiscord, FaArrowDown } from "react-icons/fa";
 import Animated from "../utils/animation";
+import "../styles/FirstPage.css"
 function FirstPage() {
     return (
         <div className="first-page">

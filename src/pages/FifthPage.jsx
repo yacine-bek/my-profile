@@ -1,4 +1,6 @@
 import { FaGithub, FaDiscord } from "react-icons/fa";
+import "../styles/FifthPage.css"
+
 function FifthPage() {
     return (
         <div className="fifth-page">

@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-
-import { Riple } from "react-loading-indicators"; // Double-check if this is the correct component spelling
-
+import { useEffect, useState } from "react";
+import { Riple } from "react-loading-indicators"; 
 import FirstPage from "./pages/FirstPage";
 import SecoundPage from "./pages/SecoundPage";
 import ThirdPage from "./pages/ThirdPage";
 import ForthPage from "./pages/ForthPage";
 import FifthPage from "./pages/FifthPage";
+import "./styles/App.css"
 
 
 function App() {
     const [user, setUser] = useState(null);
 
-    useEffect(() => {
+
+    useEffect( () =>  {
         fetch("/api/users/yacine-bek")
             .then((res) => {
                 if (!res.ok) throw new Error("User not found");
@@ -20,8 +20,10 @@ function App() {
             })
             .then(setUser)
             .catch((err) => console.error(err));
+        
     }, []);
 
+    
     return (
         <>
             <FirstPage />

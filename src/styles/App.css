@@ -1,0 +1,16 @@
+.loading-screen {
+    background-color: #33414c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.loading-screen h3 {
+    color: #f5ecdc;
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
+}

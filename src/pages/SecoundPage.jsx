@@ -1,5 +1,6 @@
 import ProjectTile from "../Components/ProjectTile";
 import { useRef, useEffect } from "react";
+import "../styles/SecoundPage.css"
 
 function SecoundPage({ repos }) {
     const repoEntries = Object.entries(repos);

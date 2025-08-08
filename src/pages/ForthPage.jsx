@@ -1,4 +1,5 @@
 import Badges from "../Components/Badges";
+import "../styles/ForthPage.css"
 
 function ForthPage() {
     return (
